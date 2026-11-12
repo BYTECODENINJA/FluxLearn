@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.base.json",
+  "include": [],
+  "references": [
+    {"path": "./packages/tsconfig"},
+    {"path": "./packages/types"},
+    {"path": "./packages/validation"},
+    {"path": "./packages/config"},
+    {"path": "./packages/db"},
+    {"path": "./packages/ui"},
+    {"path": "./apps/api"},
+    {"path": "./apps/web"}
+  ]
+}
