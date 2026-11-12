@@ -1,0 +1,91 @@
+{
+  "$schema": "https://turbo.build",
+  "globalDependencies": [
+    ".env",
+    ".env.example",
+    "tsconfig.base.json",
+    "packages/tsconfig/base.json",
+    "apps/api/.env.production",
+    "apps/web/.env.production",
+    "apps/docs/.env.production"
+  ],
+  "globalEnv": [
+    "NODE_ENV",
+    "LOG_LEVEL",
+    "API_PORT",
+    "CORS_ORIGIN",
+    "MONGODB_URI",
+    "JWT_ACCESS_SECRET",
+    "JWT_REFRESH_SECRET",
+    "CSRF_SECRET",
+    "JWT_ACCESS_TTL",
+    "JWT_REFRESH_TTL",
+    "COOKIE_DOMAIN",
+    "ARGON2_MEMORY_COST",
+    "ARGON2_TIME_COST",
+    "ARGON2_PARALLELISM",
+    "LOGIN_LOCKOUT_THRESHOLD",
+    "LOGIN_LOCKOUT_MINUTES",
+    "PASSWORD_RESET_TTL_MIN",
+    "EMAIL_VERIFICATION_TTL_HOURS",
+    "ADMIN_TRANSFER_TTL_HOURS",
+    "ENCRYPTION_MASTER_KEY",
+    "RESEND_API_KEY",
+    "EMAIL_FROM",
+    "SMTP_HOST",
+    "SMTP_PORT",
+    "SMTP_USER",
+    "SMTP_PASS",
+    "SMTP_SECURE",
+    "S3_ENDPOINT",
+    "S3_REGION",
+    "S3_BUCKET",
+    "S3_ACCESS_KEY_ID",
+    "S3_SECRET_ACCESS_KEY",
+    "APP_NAME",
+    "APP_URL",
+    "APP_SHORT_DESCRIPTION",
+    "NEXT_PUBLIC_APP_NAME",
+    "NEXT_PUBLIC_APP_URL",
+    "NEXT_PUBLIC_API_BASE_URL",
+    "NEXT_PUBLIC_DEFAULT_LOCALE",
+    "NEXT_PUBLIC_OG_IMAGE",
+    "NEXT_PUBLIC_TWITTER_HANDLE",
+    "GOOGLE_SITE_VERIFICATION",
+    "NEXT_PUBLIC_PLAUSIBLE_DOMAIN",
+    "NEXT_PUBLIC_UMAMI_WEBSITE_ID",
+    "INTERNAL_API_URL",
+    "NEXT_PUBLIC_FIREBASE_API_KEY",
+    "NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN",
+    "NEXT_PUBLIC_FIREBASE_PROJECT_ID",
+    "NEXT_PUBLIC_FIREBASE_APP_ID",
+    "NEXT_PUBLIC_ADSENSE_CLIENT",
+    "PUBLIC_ADSENSE_CLIENT"
+  ],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "dependsOn": ["^build"]
+    },
+    "typecheck": {
+      "dependsOn": ["^build"]
+    },
+    "test": {
+      "dependsOn": ["^build"]
+    },
+    "test:e2e": {
+      "dependsOn": ["^build"],
+      "cache": false
+    },
+    "clean": {
+      "cache": false
+    }
+  }
+}
