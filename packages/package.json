@@ -31,7 +31,7 @@
     "turbo": "^2.11.10"
   },
   "lint-staged": {
-    "*.{ts,tsx,js,jsx": [
+    "*.{ts,tsx,js,jsx}": [
       "eslint --fix",
       "prettier --write"
     ],
