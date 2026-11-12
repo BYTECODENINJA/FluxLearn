@@ -1,1 +1,1 @@
-pnpm exec lint-status
+pnpm exec lint-staged
