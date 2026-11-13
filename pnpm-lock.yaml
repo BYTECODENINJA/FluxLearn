@@ -68,6 +68,15 @@ importers:
 
   packages/tsconfig: {}
 
+  packages/types:
+    devDependencies:
+      '@fluxlearn/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
+      '@fluxlearn/tsconfig':
+        specifier: workspace:*
+        version: link:../tsconfig
+
 packages:
 
   '@babel/code-frame@7.29.7':

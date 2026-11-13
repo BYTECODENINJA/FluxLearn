@@ -1,5 +1,5 @@
 {
-  "name": "fluxlearn/eslint-config",
+  "name": "@fluxlearn/eslint-config",
   "version": "0.0.0",
   "private": true,
   "type": "module",

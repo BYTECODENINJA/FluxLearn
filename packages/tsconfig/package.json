@@ -1,5 +1,5 @@
 {
-  "name": "fluxlearn/tsconfig",
+  "name": "@fluxlearn/tsconfig",
   "version": "0.0.0",
   "private": true,
   "files": [
