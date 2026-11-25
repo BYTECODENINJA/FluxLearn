@@ -1,0 +1,4 @@
+{
+  "extends": "@fluxlearn/tsconfig/base.json",
+  "include": ["src/**/*"]
+}
