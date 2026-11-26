@@ -2,4 +2,9 @@ packages:
   - "apps/*"
   - "packages/*"
 allowBuilds:
+  "@firebase/util": true
+  "@stripe/cli": true
+  argon2: true
   esbuild: true
+  mongodb-memory-server: true
+  protobufjs: true

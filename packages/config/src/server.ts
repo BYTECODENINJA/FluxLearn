@@ -58,7 +58,7 @@ const ServerEnvSchema = z.object({
   ENCRYPTION_MASTER_KEY: z.string().optional(),
 
   RESEND_API_KEY: z.string().optional(),
-  EMAIL_FROM: z.string().default("Schola <noreply@schola.reactbd.com>"),
+  EMAIL_FROM: z.string().default("fluxlearn <noreply@fluxlearn.reactbd.com>"),
 
   SMTP_HOST: z.string().optional(),
   SMTP_PORT: z.coerce.number().int().positive().optional(),

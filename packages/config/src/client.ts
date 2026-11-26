@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 const ClientEnvSchema = z.object({
-  NEXT_PUBLIC_APP_NAME: z.string().default("Schola"),
+  NEXT_PUBLIC_APP_NAME: z.string().default("fluxlearn"),
   NEXT_PUBLIC_APP_URL: z.string().url().default("http://localhost:3000"),
   NEXT_PUBLIC_API_BASE_URL: z
     .string()
@@ -9,7 +9,7 @@ const ClientEnvSchema = z.object({
     .default("http://localhost:4000/api/v1"),
   NEXT_PUBLIC_DEFAULT_LOCALE: z.string().default("en"),
   NEXT_PUBLIC_OG_IMAGE: z.string().default("/opengraph-image"),
-  NEXT_PUBLIC_TWITTER_HANDLE: z.string().default("@schola"),
+  NEXT_PUBLIC_TWITTER_HANDLE: z.string().default("@fluxlearn"),
   NEXT_PUBLIC_PLAUSIBLE_DOMAIN: z.string().optional(),
   NEXT_PUBLIC_UMAMI_WEBSITE_ID: z.string().optional(),
   // Google AdSense publisher ID ("ca-pub-" + 16 digits). Blank = no ads.
