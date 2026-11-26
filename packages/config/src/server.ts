@@ -5,8 +5,8 @@ export const envBoolean = z
   .union([z.boolean(), z.string().trim().toLowerCase()])
   .transform((value, ctx) => {
     if (typeof value === "boolean") return value;
-    if (value === "true") return true;
-    if (value === "false") return false;
+    if (value === "true" || value === "1") return true;
+    if (value === "false" || value === "0") return false;
     ctx.addIssue({
       code: "custom",
       message: "must be true, false, 1 or 0",

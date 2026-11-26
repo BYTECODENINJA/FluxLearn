@@ -12,7 +12,7 @@ async function main(): Promise<void> {
   const server = app.listen(env.API_PORT, () => {
     logger.info(
       { port: env.API_PORT, env: env.NODE_ENV },
-      "Schola API listening"
+      "fluxlearn API listening"
     );
   });
   server.on("error", (err: NodeJS.ErrnoException) => {

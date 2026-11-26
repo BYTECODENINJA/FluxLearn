@@ -5,8 +5,8 @@
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "sh -c ´stripe listen --skip-update --foward-to http://127.0.0.1:8080/api/v1/stripe/webhook --events checkout.session.completed,checkout.session.async_payment_failed & pid=$!; trap \"kill $pid z>/dev/null\" EXIT INT TERM; exec tsx watch src/index.ts´",
-    "stripe:listen": "stripe listen --skip-update --foward-to http://127.0.0.1:8080/api/v1/stripe/webhook --events checkout.session.completed,checkout.session.async_payment_succeeded,checkout.session.async_payment_failed",
+    "dev": "sh -c 'stripe listen --skip-update --forward-to http://127.0.0.1:8000/api/v1/stripe/webhook --events checkout.session.completed,checkout.session.async_payment_failed & pid=$!; trap \"kill $pid 2>/dev/null\" EXIT INT TERM; tsx watch src/index.ts'",
+    "stripe:listen": "stripe listen --skip-update --forward-to http://127.0.0.1:8000/api/v1/stripe/webhook --events checkout.session.completed,checkout.session.async_payment_succeeded,checkout.session.async_payment_failed",
     "build": "tsc -p tsconfig.json",
     "start": "node dist/index.js",
     "lint": "eslint .",

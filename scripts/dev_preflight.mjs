@@ -80,7 +80,7 @@ if (busy.length > 0) {
         "",
         "  Usually an earlier `pnpm dev` is still running in another terminal - stop it",
         "  with Ctrl+C there, or end the process above (kill <pid>), then run pnpm dev again.",
-        "  To start a single app instead: pnpm --filter @schola/web dev (or @schola/api, @schola/docs).",
+        "  To start a single app instead: pnpm --filter @fluxlearn/web dev (or @fluxlearn/api, @fluxlearn/docs).",
         "",
     ];
     console.error(lines.join("\n"));
