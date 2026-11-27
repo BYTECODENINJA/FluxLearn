@@ -1,26 +1,27 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactElement, ReactNode } from "react";
-import { Lexend, Merriweather, Ubuntu_Mono } from "next/font/google";
+import { IBM_Plex_Mono, IBM_Plex_Sans, Space_Grotesk } from "next/font/google";
 import { ThemeProvider } from "@/components/theme_provider";
 import { JsonLd } from "@/components/seo/json_id";
 import { APP_NAME, APP_URL, TWITTER_HANDLE } from "@/lib/seo";
 import "./globals.css";
 
-const lexend = Lexend({
+const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
-  variable: "--font-lexend",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-ibm-plex-sans",
   display: "swap",
 });
-const merriweather = Merriweather({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  weight: ["300", "400", "700", "900"],
-  variable: "--font-merriweather",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-space-grotesk",
   display: "swap",
 });
-const ubuntuMono = Ubuntu_Mono({
+const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
   weight: ["400", "700"],
-  variable: "--font-ubuntu-mono",
+  variable: "--font-ibm-plex-mono",
   display: "swap",
 });
 
@@ -90,8 +91,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#27c4e5" },
-    { media: "(prefers-color-scheme: dark)", color: "#121820" },
+    { media: "(prefers-color-scheme: light)", color: "#f6f5f2" },
+    { media: "(prefers-color-scheme: dark)", color: "#202124" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -116,7 +117,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${lexend.variable} ${merriweather.variable} ${ubuntuMono.variable}`}
+      className={`${ibmPlexSans.variable} ${spaceGrotesk.variable} ${ibmPlexMono.variable}`}
       suppressHydrationWarning
     >
       <body className="bg-background text-foreground min-h-dvh antialiased">
