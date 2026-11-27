@@ -36,6 +36,7 @@ export const baseConfig = tseslint.config(
         },
       ],
       "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/explicit-module-boundary-types": "warn",
       "@typescript-eslint/consistent-type-imports": [
         "warn",
         {

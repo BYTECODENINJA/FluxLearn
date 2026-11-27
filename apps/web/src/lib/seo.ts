@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://reactbd.com";
-export const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME ?? "Schola";
+export const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME ?? "fluxlearn";
 export const TWITTER_HANDLE =
-  process.env.NEXT_PUBLIC_TWITTER_HANDLE ?? "@schola";
+  process.env.NEXT_PUBLIC_TWITTER_HANDLE ?? "@fluxlearn";
 
 interface PageSeoInput {
   title: string;

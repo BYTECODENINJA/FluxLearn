@@ -174,7 +174,7 @@
   --shadow-2xl: var(--shadow-2xl);
 }
 
-@keyframes schola-marquee {
+@keyframes fluxlearn-marquee {
   from {
     transform: translateX(0);
   }
@@ -183,27 +183,27 @@
   }
 }
 
-.schola-marquee {
-  animation: schola-marquee 42s linear infinite;
+.fluxlearn-marquee {
+  animation: fluxlearn-marquee 42s linear infinite;
 }
 
-.schola-marquee:hover {
+.fluxlearn-marquee:hover {
   animation-play-state: paused;
 }
 
-@keyframes schola-draw {
+@keyframes fluxlearn-draw {
   to {
     stroke-dashoffset: 0;
   }
 }
 
-.schola-squiggle path {
+.fluxlearn-squiggle path {
   stroke-dasharray: 240;
   stroke-dashoffset: 240;
-  animation: schola-draw 1.1s 0.3s ease forwards;
+  animation: fluxlearn-draw 1.1s 0.3s ease forwards;
 }
 
-@keyframes schola-drift {
+@keyframes fluxlearn-drift {
   0%,
   100% {
     transform: translate3d(0, 0, 0);
@@ -213,15 +213,15 @@
   }
 }
 
-.schola-drift {
-  animation: schola-drift 16s ease-in-out infinite;
+.fluxlearn-drift {
+  animation: fluxlearn-drift 16s ease-in-out infinite;
 }
 
-.schola-drift-late {
-  animation: schola-drift 18s ease-in-out infinite reverse;
+.fluxlearn-drift-late {
+  animation: fluxlearn-drift 18s ease-in-out infinite reverse;
 }
 
-@keyframes schola-kenburns {
+@keyframes fluxlearn-kenburns {
   from {
     transform: scale(1);
   }
@@ -230,11 +230,11 @@
   }
 }
 
-.schola-kenburns {
-  animation: schola-kenburns 18s ease-in-out infinite alternate;
+.fluxlearn-kenburns {
+  animation: fluxlearn-kenburns 18s ease-in-out infinite alternate;
 }
 
-@keyframes schola-float {
+@keyframes fluxlearn-float {
   0%,
   100% {
     transform: translateY(0);
@@ -244,23 +244,23 @@
   }
 }
 
-.schola-float {
-  animation: schola-float 5.5s ease-in-out infinite;
+.fluxlearn-float {
+  animation: fluxlearn-float 5.5s ease-in-out infinite;
 }
 
-.schola-lift {
+.fluxlearn-lift {
   transition:
     transform 180ms ease,
     box-shadow 180ms ease;
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .schola-lift:hover {
+  .fluxlearn-lift:hover {
     transform: translateY(-4px);
   }
 }
 
-@keyframes schola-theme-pop {
+@keyframes fluxlearn-theme-pop {
   from {
     transform: rotate(-30deg) scale(0.6);
     opacity: 0;
@@ -271,13 +271,13 @@
   }
 }
 
-.schola-theme-icon {
-  animation: schola-theme-pop 280ms ease;
+.fluxlearn-theme-icon {
+  animation: fluxlearn-theme-pop 280ms ease;
 }
 
 /* The radius grows from a corner. Inside it, the new theme colors are
    already showing. Only a narrow band at the edge stays soft. */
-@property --schola-wipe {
+@property --fluxlearn-wipe {
   syntax: "<length>";
   inherits: false;
   initial-value: 0px;
@@ -303,48 +303,49 @@
 }
 html[data-theme-wipe="dark"]::view-transition-new(root),
 html[data-theme-wipe="light"]::view-transition-new(root) {
-  --schola-wipe: 0px;
-  animation: schola-wipe-radius 1.8s cubic-bezier(0.45, 0.02, 0.12, 1) forwards;
+  --fluxlearn-wipe: 0px;
+  animation: fluxlearn-wipe-radius 1.8s cubic-bezier(0.45, 0.02, 0.12, 1)
+    forwards;
 }
 
 html[data-theme-wipe="dark"]::view-transition-new(root) {
   -webkit-mask-image: radial-gradient(
     circle at 100% 0%,
-    #000 calc(var(--schola-wipe) - 64px),
-    rgb(0 0 0 / 50%) var(--schola-wipe),
-    transparent calc(var(--schola-wipe) + 28px)
+    #000 calc(var(--fluxlearn-wipe) - 64px),
+    rgb(0 0 0 / 50%) var(--fluxlearn-wipe),
+    transparent calc(var(--fluxlearn-wipe) + 28px)
   );
   mask-image: radial-gradient(
     circle at 100% 0%,
-    #000 calc(var(--schola-wipe) - 64px),
-    rgb(0 0 0 / 50%) var(--schola-wipe),
-    transparent calc(var(--schola-wipe) + 28px)
+    #000 calc(var(--fluxlearn-wipe) - 64px),
+    rgb(0 0 0 / 50%) var(--fluxlearn-wipe),
+    transparent calc(var(--fluxlearn-wipe) + 28px)
   );
 }
 
 html[data-theme-wipe="light"]::view-transition-new(root) {
   -webkit-mask-image: radial-gradient(
     circle at 0% 100%,
-    #000 calc(var(--schola-wipe) - 64px),
-    rgb(0 0 0 / 50%) var(--schola-wipe),
-    transparent calc(var(--schola-wipe) + 28px)
+    #000 calc(var(--fluxlearn-wipe) - 64px),
+    rgb(0 0 0 / 50%) var(--fluxlearn-wipe),
+    transparent calc(var(--fluxlearn-wipe) + 28px)
   );
   mask-image: radial-gradient(
     circle at 0% 100%,
-    #000 calc(var(--schola-wipe) - 64px),
-    rgb(0 0 0 / 50%) var(--schola-wipe),
-    transparent calc(var(--schola-wipe) + 28px)
+    #000 calc(var(--fluxlearn-wipe) - 64px),
+    rgb(0 0 0 / 50%) var(--fluxlearn-wipe),
+    transparent calc(var(--fluxlearn-wipe) + 28px)
   );
 }
 
-@keyframes schola-wipe-radius {
+@keyframes fluxlearn-wipe-radius {
   to {
-    --schola-wipe: 200vmax;
+    --fluxlearn-wipe: 200vmax;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .schola-theme-icon,
+  .fluxlearn-theme-icon,
   html[data-theme-wipe="dark"]::view-transition-new(root),
   html[data-theme-wipe="light"]::view-transition-new(root) {
     animation: none;
@@ -353,20 +354,20 @@ html[data-theme-wipe="light"]::view-transition-new(root) {
     filter: none;
   }
 
-  .schola-marquee,
-  .schola-drift,
-  .schola-drift-late,
-  .schola-kenburns,
-  .schola-float,
-  .schola-squiggle path {
+  .fluxlearn-marquee,
+  .fluxlearn-drift,
+  .fluxlearn-drift-late,
+  .fluxlearn-kenburns,
+  .fluxlearn-float,
+  .fluxlearn-squiggle path {
     animation: none;
   }
 
-  .schola-squiggle path {
+  .fluxlearn-squiggle path {
     stroke-dashoffset: 0;
   }
 }
-.schola-lift:hover {
+.fluxlearn-lift:hover {
   transform: none;
 }
 

@@ -11,7 +11,7 @@ export function dayRange(
   from: Date | undefined,
   to: Date | undefined,
   days = 90
-) {
+): { from: Date; to: Date } {
   const end = startOfDayUtc(to ?? new Date());
   const start = from
     ? startOfDayUtc(from)
@@ -26,7 +26,11 @@ export function dayRange(
  * report card and the student/parent dashboards so they agree with the
  * attendance tab, which never looks past today.
  */
-export function yearToDateRange(start: Date, end: Date, now = new Date()) {
+export function yearToDateRange(
+  start: Date,
+  end: Date,
+  now = new Date()
+): { from: Date; to: Date } {
   const today = startOfDayUtc(now);
   return { from: startOfDayUtc(start), to: end < today ? end : today };
 }

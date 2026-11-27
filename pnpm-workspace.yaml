@@ -1,6 +1,9 @@
 packages:
   - "apps/*"
   - "packages/*"
+overrides:
+  "@types/react": 19.3.3
+  "@types/react-dom": 19.3.0
 allowBuilds:
   "@firebase/util": true
   "@stripe/cli": true

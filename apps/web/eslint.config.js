@@ -8,7 +8,7 @@ export default [
     ignores: [
       ".next/**",
       "next.config.ts",
-      "postcss.config.js",
+      "postcss.config.mjs",
       "eslint.config.js",
       "playwright.config.ts",
       "vitest.config.ts",
